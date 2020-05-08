@@ -96,7 +96,7 @@ export const routes: Routes = [
     component:EmployeeAddComponent
   },
   {
-    path:'Home',
+    path:'Employee',
     component:AngularCRUDComponent
   },
   { path: '**', component: P404Component }

@@ -16,7 +16,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Employee',
-    url: '/home',
+    url: '/Employee',
     icon: 'icon-drop'
   },
   {
