@@ -8,6 +8,9 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { EmployeeupdateComponent } from './employeeupdate/employeeupdate.component';
+import { EmployeeAddComponent } from './employee-add/employee-add.component';
+import { AngularCRUDComponent } from './angular-crud/EmployeeList';
 
 export const routes: Routes = [
   {
@@ -83,6 +86,18 @@ export const routes: Routes = [
         loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
       }
     ]
+  },
+  {
+    path:'Edit',
+    component:EmployeeupdateComponent
+  },
+  {
+    path:'Add',
+    component:EmployeeAddComponent
+  },
+  {
+    path:'Home',
+    component:AngularCRUDComponent
   },
   { path: '**', component: P404Component }
 ];
