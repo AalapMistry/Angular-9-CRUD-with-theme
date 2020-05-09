@@ -12,7 +12,7 @@ export class EmployeeDataService {
   }
 
   getEmployee() {
-    return this.http.get<Employee[]>(ROOT_URL + 'Employees');
+    return this.http.get<Employee[]>(ROOT_URL + 'Employee');
   }
   AddEmployee(emp: Employee) {
 
@@ -22,7 +22,7 @@ export class EmployeeDataService {
     }
     console.log(ROOT_URL);
 
-    return this.http.post<Employee>(ROOT_URL + '/Employees', body, { headers });
+    return this.http.post<Employee>(ROOT_URL + '/Employee', body, { headers });
 
   }
 
@@ -35,7 +35,7 @@ export class EmployeeDataService {
       Fname: emp.firstname, Lname: emp.lastname, Email: emp.email, ID: emp.id
       , gender: emp.gender
     }
-    return this.http.put<Employee>(ROOT_URL + 'Employees/' + emp.id, body, { headers, params })
+    return this.http.put<Employee>(ROOT_URL + 'Employee/' + emp.id, body, { headers, params })
 
   }
   DeleteEmployee(emp: Employee) {
@@ -44,7 +44,7 @@ export class EmployeeDataService {
     var body = {
       Fname: emp.firstname, Lname: emp.lastname, Email: emp.email, ID: emp.id
     }
-    return this.http.delete<Employee>(ROOT_URL + '/Employees/' + emp.id)
+    return this.http.delete<Employee>(ROOT_URL + '/Employee/' + emp.id)
 
   }
 
